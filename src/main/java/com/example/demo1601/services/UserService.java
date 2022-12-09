@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 public class UserService {
     private final UserRepository userRepository;
 
+
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -34,5 +35,16 @@ public class UserService {
     public UserModel login(String login, String password){
         UserModel userModel;
         return userRepository.findUserModelByLoginAndPassword(login, password);
+    }
+
+    public void changeUser(String name, String lastName, String disc,
+                           String photo, String login){
+        UserModel userModel = userRepository.findUserModelByLogin(login);
+        userModel.setDisc(disc);
+        userModel.setMainPhoto(photo);
+        userModel.setName(name);
+        userModel.setLastName(lastName);
+
+        userRepository.save(userModel);
     }
 }

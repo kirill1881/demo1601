@@ -42,4 +42,13 @@ public class UserController {
         return userRepository.findUserModelByLogin(login);
     }
 
+    @PostMapping("/change")
+    public void changeData(@RequestParam String name,
+                           @RequestParam String lastName,
+                           @RequestParam String disc,
+                           @RequestParam String mainPhoto,
+                           @RequestParam String login){
+        userService.changeUser(name, lastName, disc, mainPhoto, login);
+    }
+
 }
