@@ -25,7 +25,7 @@ public class UserController {
                               @RequestParam String mainPhoto,
                               @RequestParam String disc){
         return userService.createUser(login, password,
-                name, lastName, mainPhoto, disc);
+                name, lastName, mainPhoto);
     }
     @PostMapping("/login")
     public UserModel login(@RequestParam String login,
@@ -43,7 +43,7 @@ public class UserController {
     }
 
     @PostMapping("/change")
-    public void changeData(@RequestParam String name,
+    public void changeData(@RequestParam(value = "name") String name,
                            @RequestParam String lastName,
                            @RequestParam String disc,
                            @RequestParam String mainPhoto,

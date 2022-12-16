@@ -14,7 +14,7 @@ public class UserService {
     }
     public boolean createUser(String login, String password,
                               String name, String lastName,
-                              String mainPhoto, String disc){
+                              String mainPhoto){
         UserModel userModel;
         userModel = userRepository.findUserModelByLogin(login);
         if (userModel!=null){
@@ -26,7 +26,6 @@ public class UserService {
         userModel.setPassword(password);
         userModel.setLastName(lastName);
         userModel.setMainPhoto(mainPhoto);
-        userModel.setDisc(disc);
 
         userRepository.save(userModel);
         return true;

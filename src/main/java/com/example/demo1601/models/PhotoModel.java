@@ -21,4 +21,6 @@ public class PhotoModel {
 
     @Column(name = "author_id")
     private long authorId;
+
+
 }
