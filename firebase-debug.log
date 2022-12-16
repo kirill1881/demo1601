@@ -1,0 +1,62 @@
+[debug] [2022-12-13T18:06:36.067Z] ----------------------------------------------------------------------
+[debug] [2022-12-13T18:06:36.068Z] Command:       /usr/local/bin/firebase /Users/ula/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase init
+[debug] [2022-12-13T18:06:36.069Z] CLI Version:   11.17.0
+[debug] [2022-12-13T18:06:36.069Z] Platform:      darwin
+[debug] [2022-12-13T18:06:36.069Z] Node Version:  v16.16.0
+[debug] [2022-12-13T18:06:36.070Z] Time:          Tue Dec 13 2022 21:06:36 GMT+0300 (Moscow Standard Time)
+[debug] [2022-12-13T18:06:36.070Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-12-13T18:06:36.168Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-12-13T18:06:36.169Z] > authorizing via signed-in user (kirillovk317@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/ula/Downloads/demo1601
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2022-12-13T18:06:57.995Z] Using project from CLI flag: photo-app-160
+[debug] [2022-12-13T18:06:57.999Z] > refreshing access token with scopes: []
+[debug] [2022-12-13T18:06:58.002Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-12-13T18:06:58.002Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-13T18:06:58.260Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2022-12-13T18:06:58.262Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-12-13T18:06:58.279Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/photo-app-160 [none]
+[debug] [2022-12-13T18:06:58.751Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/photo-app-160 200
+[debug] [2022-12-13T18:06:58.752Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/photo-app-160 {"projectId":"photo-app-160","projectNumber":"779557222887","displayName":"Photo app 160","name":"projects/photo-app-160","resources":{"hostingSite":"photo-app-160","storageBucket":"photo-app-160.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_64e4507d-c0cc-4a7b-816b-682e645fa764"}
+[info] i  Using project photo-app-160 (Photo app 160) 
+[info] 
+=== Hosting:github Setup
+[info] 
+[info] i  Detected a .git folder at /Users/ula/Downloads/demo1601 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=511994389&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2022-12-13T18:07:00.811Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2022-12-13T18:07:00.814Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2022-12-13T18:07:01.294Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2022-12-13T18:07:01.294Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2022-12-13T18:07:01.302Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2022-12-13T18:07:01.777Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2022-12-13T18:07:01.777Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"kirill1881","id":82600534,"node_id":"MDQ6VXNlcjgyNjAwNTM0","avatar_url":"https://avatars.githubusercontent.com/u/82600534?v=4","gravatar_id":"","url":"https://api.github.com/users/kirill1881","html_url":"https://github.com/kirill1881","followers_url":"https://api.github.com/users/kirill1881/followers","following_url":"https://api.github.com/users/kirill1881/following{/other_user}","gists_url":"https://api.github.com/users/kirill1881/gists{/gist_id}","starred_url":"https://api.github.com/users/kirill1881/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/kirill1881/subscriptions","organizations_url":"https://api.github.com/users/kirill1881/orgs","repos_url":"https://api.github.com/users/kirill1881/repos","events_url":"https://api.github.com/users/kirill1881/events{/privacy}","received_events_url":"https://api.github.com/users/kirill1881/received_events","type":"User","site_admin":false,"name":null,"company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":35,"public_gists":0,"followers":3,"following":0,"created_at":"2021-04-15T15:33:58Z","updated_at":"2022-12-09T12:04:58Z","private_gists":0,"total_private_repos":6,"owned_private_repos":6,"disk_usage":23748,"collaborators":5,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] ✔  Success! Logged into GitHub as kirill1881 
+[info] 
