@@ -78,4 +78,8 @@ public class PhotoService {
     public List<PhotoModel> getByUserId(long userId){
         return photoRepository.findAllByAuthorId(userId);
     }
+
+    public List<PhotoModel> getAllPhotos(String login){
+        return photoRepository.findAllByAuthorId(userRepository.findUserModelByLogin(login).getId());
+    }
 }

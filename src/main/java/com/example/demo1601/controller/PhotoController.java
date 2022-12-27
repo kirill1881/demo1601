@@ -30,4 +30,8 @@ public class PhotoController {
         photoService.addPhoto(url, disc, login);
     }
 
+    @PostMapping("/forUser")
+    public void getPhoto(@RequestParam String login){
+        photoService.getAllPhotos(login);
+    }
 }
